@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Technology | HAKA SOLUTIONS</title>
+  <meta name="description" content="Explore the technology disciplines HAKA SOLUTIONS applies — Data &amp; Analytics, Cloud, Process Automation, AI-Assisted Processes, and Security — to help businesses improve efficiency and achieve their goals." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://hakasolutions.com/technology.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Technology | HAKA SOLUTIONS" />
+  <meta property="og:description" content="HAKA SOLUTIONS applies modern technology disciplines — data analytics, cloud, automation, AI, and security — to deliver practical business outcomes." />
+  <meta property="og:url" content="https://hakasolutions.com/technology.html" />
+  <meta property="og:site_name" content="HAKA SOLUTIONS" />
+  <meta property="og:image" content="https://hakasolutions.com/images/og-technology.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Technology | HAKA SOLUTIONS" />
+  <meta name="twitter:description" content="Five technology areas HAKA SOLUTIONS applies to help businesses operate smarter and scale sustainably." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Site Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <style>
+    /* -- Technology Page Specific Styles -- */
+
+    /* Disclaimer / note box */
+    .tech-note-box {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: rgba(34,211,238,0.06);
+      border: 1px solid rgba(34,211,238,0.22);
+      border-left: 4px solid var(--cyan);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      margin-top: 32px;
+      max-width: 680px;
+    }
+
+    .tech-note-box-icon {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      color: var(--cyan);
+      margin-top: 2px;
+    }
+
+    .tech-note-box p {
+      font-size: 0.9rem;
+      color: var(--text-pale);
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* Large technology area cards */
+    .tech-area-card {
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      margin-bottom: 40px;
+      transition: box-shadow var(--transition), transform var(--transition);
+    }
+
+    .tech-area-card:last-child {
+      margin-bottom: 0;
+    }
+
+    .tech-area-card-light {
+      background: var(--white);
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .tech-area-card-light:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-3px);
+    }
+
+    .tech-area-card-dark {
+      background: var(--navy-card);
+      border: 1px solid var(--navy-border);
+      box-shadow: var(--shadow-dark);
+    }
+
+    .tech-area-card-dark:hover {
+      border-color: rgba(34,211,238,0.2);
+      box-shadow: 0 16px 56px rgba(0,0,0,0.35);
+      transform: translateY(-3px);
+    }
+
+    .tech-area-card-inner {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      min-height: 320px;
+    }
+
+    @media (max-width: 900px) {
+      .tech-area-card-inner {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .tech-area-card-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 48px 40px;
+      border-right: 1px solid var(--border-light);
+    }
+
+    .tech-area-card-dark .tech-area-card-left {
+      border-right-color: var(--navy-border);
+    }
+
+    @media (max-width: 900px) {
+      .tech-area-card-left {
+        border-right: none;
+        border-bottom: 1px solid var(--border-light);
+        padding: 40px 32px 32px;
+      }
+      .tech-area-card-dark .tech-area-card-left {
+        border-bottom-color: var(--navy-border);
+      }
+    }
+
+    .tech-area-card-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      flex-shrink: 0;
+    }
+
+    .tech-icon-blue  { background: rgba(37,99,235,0.12); color: var(--electric-blue); }
+    .tech-icon-cyan  { background: rgba(34,211,238,0.12); color: var(--cyan); }
+    .tech-icon-violet { background: rgba(124,58,237,0.12); color: var(--light-violet); }
+    .tech-icon-green { background: rgba(16,185,129,0.12); color: #10B981; }
+
+    .tech-area-card-icon svg {
+      width: 36px;
+      height: 36px;
+    }
+
+    .tech-area-card-left h3 {
+      font-size: 1.375rem;
+      font-weight: 800;
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    .tech-area-card-light .tech-area-card-left h3 {
+      color: var(--text-main);
+    }
+
+    .tech-area-card-dark .tech-area-card-left h3 {
+      color: var(--white);
+    }
+
+    .tech-area-card-right {
+      padding: 48px 48px 48px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    @media (max-width: 900px) {
+      .tech-area-card-right {
+        padding: 32px;
+      }
+    }
+
+    .tech-area-card-right p {
+      font-size: 1rem;
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+
+    .tech-area-card-light .tech-area-card-right p {
+      color: var(--text-muted);
+    }
+
+    .tech-area-card-dark .tech-area-card-right p {
+      color: var(--text-pale);
+    }
+
+    .tech-area-card-right p:last-of-type {
+      margin-bottom: 28px;
+    }
+
+    .tech-capabilities-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .tech-area-card-light .tech-capabilities-label { color: var(--text-muted); }
+    .tech-area-card-dark .tech-capabilities-label  { color: var(--text-light); }
+
+    .tech-capabilities-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 24px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    @media (max-width: 600px) {
+      .tech-capabilities-list { grid-template-columns: 1fr; }
+    }
+
+    .tech-capabilities-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .tech-area-card-light .tech-capabilities-list li { color: var(--text-main); }
+    .tech-area-card-dark .tech-capabilities-list li  { color: var(--text-pale); }
+
+    .tech-capabilities-list li::before {
+      content: '';
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .cap-dot-blue::before   { background: var(--electric-blue); }
+    .cap-dot-cyan::before   { background: var(--cyan); }
+    .cap-dot-violet::before { background: var(--light-violet); }
+    .cap-dot-green::before  { background: #10B981; }
+
+    /* Approach section */
+    .tech-approach-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    @media (max-width: 960px) {
+      .tech-approach-grid { grid-template-columns: 1fr; gap: 48px; }
+    }
+
+    .tech-approach-text p {
+      font-size: 1.0625rem;
+      color: var(--text-pale);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .tech-approach-text p:last-child { margin-bottom: 0; }
+
+    .tech-principle-mini-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--navy-border);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 16px;
+      transition: border-color var(--transition), background var(--transition);
+    }
+
+    .tech-principle-mini-card:last-child { margin-bottom: 0; }
+
+    .tech-principle-mini-card:hover {
+      border-color: rgba(34,211,238,0.25);
+      background: rgba(255,255,255,0.06);
+    }
+
+    .tech-principle-mini-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .tech-principle-mini-icon svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .tech-principle-mini-card h4 {
+      font-size: 0.9375rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+
+    .tech-principle-mini-card p {
+      font-size: 0.875rem;
+      color: var(--text-light);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    /* Guiding principles grid */
+    .principles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    @media (max-width: 900px) {
+      .principles-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 560px) {
+      .principles-grid { grid-template-columns: 1fr; }
+    }
+
+    .principle-card {
+      background: var(--white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      text-align: center;
+      transition: all var(--transition);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .principle-card:hover {
+      box-shadow: var(--shadow-md);
+      border-color: rgba(59,130,246,0.18);
+      transform: translateY(-4px);
+    }
+
+    .principle-card-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+
+    .principle-card-icon svg { width: 24px; height: 24px; }
+
+    .principle-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 10px;
+    }
+
+    .principle-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* CTA section */
+    .tech-cta-content {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .tech-cta-content h2 {
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+
+    .tech-cta-content p {
+      font-size: 1.0625rem;
+      color: var(--text-pale);
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+
+    .tech-cta-actions {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* Back to top */
+    .back-to-top {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--primary-blue);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 16px rgba(37,99,235,0.35);
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(12px);
+      transition: all var(--transition);
+      z-index: 900;
+      border: none;
+      cursor: pointer;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    .back-to-top svg { width: 18px; height: 18px; }
+
+    /* Badge green */
+    .badge-green {
+      background: rgba(16,185,129,0.10);
+      color: #10B981;
+      border: 1px solid rgba(16,185,129,0.2);
+    }
+
+    /* Section anchor offset for fixed nav */
+    .section-anchor {
+      display: block;
+      position: relative;
+      top: -100px;
+      visibility: hidden;
+    }
+
+    /* Nav active state for technology */
+    .nav-link[href="technology.html"] {
+      color: var(--cyan);
+    }
+
+    /* Responsive grid adjustments */
+    @media (max-width: 768px) {
+      .tech-approach-grid { gap: 40px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ---------------------------------------------------------------
+       NAVIGATION
+  --------------------------------------------------------------- -->
+  <nav class="nav-wrapper" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="HAKA SOLUTIONS - Home">
+        <img src="assets/logo.jpeg" alt="HAKA SOLUTIONS Logo" class="nav-logo-img" />
+        <div class="nav-logo-text">
+          <span class="nav-logo-name">HAKA SOLUTIONS</span>
+          <span class="nav-logo-tagline">Technology &middot; Digital &middot; Growth</span>
+        </div>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="solutions.html" class="nav-link">Solutions</a></li>
+        <li><a href="technology.html" class="nav-link active">Technology</a></li>
+        <li><a href="careers.html" class="nav-link">Careers</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn-primary btn-sm nav-cta">Let's Talk</a>
+      <button class="nav-mobile-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ---------------------------------------------------------------
+       MOBILE MENU
+  --------------------------------------------------------------- -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu-panel">
+      <div class="mobile-menu-header">
+        <a href="index.html" class="nav-logo">
+          <img src="assets/logo.jpeg" alt="HAKA SOLUTIONS Logo" class="nav-logo-img" />
+          <div class="nav-logo-text">
+            <span class="nav-logo-name">HAKA SOLUTIONS</span>
+            <span class="nav-logo-tagline">Technology &middot; Digital &middot; Growth</span>
+          </div>
+        </a>
+        <button class="mobile-menu-close" aria-label="Close navigation menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+      <nav class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <a href="about.html" class="mobile-nav-link">About Us</a>
+        <a href="services.html" class="mobile-nav-link">Services</a>
+        <a href="solutions.html" class="mobile-nav-link">Solutions</a>
+        <a href="technology.html" class="mobile-nav-link active">Technology</a>
+        <a href="careers.html" class="mobile-nav-link">Careers</a>
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+      </nav>
+      <div class="mobile-menu-footer">
+        <a href="contact.html" class="btn btn-primary w-full">Let's Talk</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ---------------------------------------------------------------
+       PAGE HERO
+  --------------------------------------------------------------- -->
+  <section class="page-hero" aria-labelledby="hero-heading">
+    <div class="container page-hero-content">
+      <p class="eyebrow reveal">TECHNOLOGY</p>
+      <h1 id="hero-heading" class="display-lg reveal reveal-delay-1">Technology That Enables Progress</h1>
+      <p class="reveal reveal-delay-2">
+        HAKA applies modern technology disciplines to help businesses improve efficiency
+        and achieve their goals. We focus on practical application — not technology for
+        its own sake, but technology that creates measurable, real-world outcomes.
+      </p>
+
+      <!-- Disclaimer note box -->
+      <div class="tech-note-box reveal reveal-delay-3" role="note" aria-label="Transparency notice">
+        <svg class="tech-note-box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="8" x2="12" y2="12"/>
+          <line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+        <p>
+          <strong style="color:var(--cyan);">Transparency Notice:</strong> We describe technology areas relevant to our work. We do not claim specific vendor certifications, proprietary platforms, or partnerships unless confirmed. Our strength lies in how we apply technology thoughtfully and responsibly.
+        </p>
+      </div>
+
+      <div style="margin-top:40px;" class="reveal reveal-delay-4">
+        <a href="contact.html" class="btn btn-primary btn-lg">
+          Talk About Technology
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------------------------------------------------------------
+       SECTION 3: TECHNOLOGY AREAS INTRO + FIVE AREA CARDS
+  --------------------------------------------------------------- -->
+  <section class="section bg-light" id="technology-areas" aria-labelledby="areas-heading">
+    <div class="container">
+
+      <!-- Section header -->
+      <div class="section-header reveal">
+        <p class="eyebrow eyebrow-dark">OUR TECHNOLOGY FOCUS</p>
+        <h2 id="areas-heading" class="display-md">Five Areas of Technology We Apply</h2>
+        <p>
+          We approach technology as a practical enabler. Across five interconnected disciplines,
+          we apply the right tools and thinking to real business challenges — helping organisations
+          work smarter, reduce friction, and build sustainable operational capability.
+        </p>
+      </div>
+
+      <!-- --- AREA 1: DATA & ANALYTICS --- -->
+      <span class="section-anchor" id="data-analytics" aria-hidden="true"></span>
+      <article class="tech-area-card tech-area-card-light reveal" aria-labelledby="area-data-heading">
+        <div class="tech-area-card-inner">
+          <!-- Left panel -->
+          <div class="tech-area-card-left">
+            <div class="tech-area-card-icon tech-icon-blue" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10"/>
+                <line x1="12" y1="20" x2="12" y2="4"/>
+                <line x1="6"  y1="20" x2="6"  y2="14"/>
+                <line x1="2"  y1="20" x2="22" y2="20"/>
+              </svg>
+            </div>
+            <span class="badge badge-blue" style="margin-bottom:12px;">Data</span>
+            <h3 id="area-data-heading">Data &amp; Analytics</h3>
+          </div>
+          <!-- Right panel -->
+          <div class="tech-area-card-right">
+            <p>
+              Data is the foundation of informed decision-making. At HAKA, we help organisations
+              collect, organise, and interpret their operational data so that insight is available
+              to the right people at the right time. From structured reporting to trend analysis,
+              we design data workflows that surface what matters most.
+            </p>
+            <p>
+              Rather than overwhelming teams with dashboards for their own sake, we focus on
+              actionable intelligence — metrics tied directly to business outcomes, process
+              performance indicators that drive improvement, and information management
+              practices that keep data trustworthy and usable over time.
+            </p>
+            <p class="tech-capabilities-label">Core Capabilities</p>
+            <ul class="tech-capabilities-list" role="list">
+              <li class="cap-dot-blue">Data collection and organisation</li>
+              <li class="cap-dot-blue">Operational reporting</li>
+              <li class="cap-dot-blue">Process performance tracking</li>
+              <li class="cap-dot-blue">Information management</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- --- AREA 2: CLOUD --- -->
+      <span class="section-anchor" id="cloud" aria-hidden="true"></span>
+      <article class="tech-area-card tech-area-card-dark reveal" aria-labelledby="area-cloud-heading">
+        <div class="tech-area-card-inner">
+          <!-- Left panel -->
+          <div class="tech-area-card-left">
+            <div class="tech-area-card-icon tech-icon-cyan" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+              </svg>
+            </div>
+            <span class="badge badge-cyan" style="margin-bottom:12px;">Cloud</span>
+            <h3 id="area-cloud-heading" style="color:var(--white);">Cloud Technologies</h3>
+          </div>
+          <!-- Right panel -->
+          <div class="tech-area-card-right">
+            <p>
+              Cloud-enabled ways of working have fundamentally changed what's possible for
+              organisations of all sizes. HAKA designs processes and workflows that are
+              compatible with cloud environments — enabling remote access, team collaboration,
+              and scalable infrastructure without locking clients into specific vendor
+              ecosystems.
+            </p>
+            <p>
+              Our approach to cloud is vendor-neutral and pragmatic. We help organisations
+              benefit from scalable, accessible digital operations without unnecessary
+              complexity. Whether your teams are distributed across locations or require
+              flexible capacity, we design operational workflows that leverage cloud principles
+              responsibly and effectively.
+            </p>
+            <p class="tech-capabilities-label">Core Capabilities</p>
+            <ul class="tech-capabilities-list" role="list">
+              <li class="cap-dot-cyan">Cloud-compatible process design</li>
+              <li class="cap-dot-cyan">Remote workflow enablement</li>
+              <li class="cap-dot-cyan">Scalable digital operations</li>
+              <li class="cap-dot-cyan">Platform-agnostic approaches</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- --- AREA 3: AUTOMATION --- -->
+      <span class="section-anchor" id="automation" aria-hidden="true"></span>
+      <article class="tech-area-card tech-area-card-light reveal" aria-labelledby="area-automation-heading">
+        <div class="tech-area-card-inner">
+          <!-- Left panel -->
+          <div class="tech-area-card-left">
+            <div class="tech-area-card-icon tech-icon-blue" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="23 4 23 10 17 10"/>
+                <polyline points="1 20 1 14 7 14"/>
+                <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+              </svg>
+            </div>
+            <span class="badge badge-blue" style="margin-bottom:12px;">Automation</span>
+            <h3 id="area-automation-heading">Process Automation</h3>
+          </div>
+          <!-- Right panel -->
+          <div class="tech-area-card-right">
+            <p>
+              Repetitive, manual tasks drain team capacity and introduce human error. HAKA
+              identifies automation opportunities within operational workflows and designs
+              solutions that reduce manual effort — freeing people to focus on higher-value
+              work that genuinely requires human judgement and expertise.
+            </p>
+            <p>
+              We approach automation with care, mapping each process before recommending
+              tooling. Automation is only valuable when it is well-designed, properly
+              governed, and integrated smoothly with existing workflows. We prioritise
+              reliability and maintainability alongside efficiency gains, ensuring that
+              automated processes remain robust as business requirements evolve.
+            </p>
+            <p class="tech-capabilities-label">Core Capabilities</p>
+            <ul class="tech-capabilities-list" role="list">
+              <li class="cap-dot-blue">Workflow automation design</li>
+              <li class="cap-dot-blue">Repetitive task reduction</li>
+              <li class="cap-dot-blue">Process orchestration</li>
+              <li class="cap-dot-blue">Digital efficiency improvement</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- --- AREA 4: AI --- -->
+      <span class="section-anchor" id="ai" aria-hidden="true"></span>
+      <article class="tech-area-card tech-area-card-dark reveal" aria-labelledby="area-ai-heading">
+        <div class="tech-area-card-inner">
+          <!-- Left panel -->
+          <div class="tech-area-card-left">
+            <div class="tech-area-card-icon tech-icon-violet" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a4 4 0 0 1 4 4v1h1a3 3 0 0 1 0 6h-1v1a4 4 0 0 1-8 0v-1H7a3 3 0 0 1 0-6h1V6a4 4 0 0 1 4-4z"/>
+                <path d="M9.5 9.5 L12 7 L14.5 9.5"/>
+                <path d="M9.5 14.5 L12 17 L14.5 14.5"/>
+                <circle cx="12" cy="12" r="2"/>
+              </svg>
+            </div>
+            <span class="badge badge-violet" style="margin-bottom:12px;">AI</span>
+            <h3 id="area-ai-heading" style="color:var(--white);">AI-Assisted Processes</h3>
+          </div>
+          <!-- Right panel -->
+          <div class="tech-area-card-right">
+            <p>
+              We are actively exploring how AI-assisted tools can improve process quality
+              and operational efficiency. This exploration is thoughtful and measured — we
+              do not claim a proprietary AI platform or overstate the role of AI in our
+              work. Where AI tools demonstrably add value with appropriate oversight, we
+              integrate them carefully and transparently into our delivery approach.
+            </p>
+            <p>
+              Our focus is on AI as an assistive layer: supporting human review, improving
+              classification accuracy, flagging anomalies, and reducing time spent on
+              pattern-matching tasks. We maintain rigorous human governance over any
+              AI-assisted output and ensure that our clients understand exactly where and
+              how AI-assisted methods are being applied within their operations.
+            </p>
+            <p class="tech-capabilities-label">Core Capabilities</p>
+            <ul class="tech-capabilities-list" role="list">
+              <li class="cap-dot-violet">AI-assisted data quality</li>
+              <li class="cap-dot-violet">Intelligent process screening</li>
+              <li class="cap-dot-violet">Automated classification support</li>
+              <li class="cap-dot-violet">Machine-assisted verification</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- --- AREA 5: SECURITY --- -->
+      <span class="section-anchor" id="security" aria-hidden="true"></span>
+      <article class="tech-area-card tech-area-card-light reveal" aria-labelledby="area-security-heading">
+        <div class="tech-area-card-inner">
+          <!-- Left panel -->
+          <div class="tech-area-card-left">
+            <div class="tech-area-card-icon tech-icon-green" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <polyline points="9 12 11 14 15 10"/>
+              </svg>
+            </div>
+            <span class="badge badge-green" style="margin-bottom:12px;">Security</span>
+            <h3 id="area-security-heading">Security &amp; Data Integrity</h3>
+          </div>
+          <!-- Right panel -->
+          <div class="tech-area-card-right">
+            <p>
+              Responsible data handling is central to every engagement at HAKA. We design
+              workflows with security awareness built in from the start — not applied
+              retrospectively. This means thinking carefully about data access controls,
+              information flows, storage practices, and the confidentiality of client and
+              end-user data throughout the lifecycle of every project.
+            </p>
+            <p>
+              We do not make unverified certification claims. Instead, we commit to applying
+              recognised security practices in everything we design and deliver. Our teams
+              are trained to handle sensitive information with discipline and discretion, and
+              we build operational processes that reduce exposure, minimise unnecessary data
+              retention, and support our clients' own compliance obligations.
+            </p>
+            <p class="tech-capabilities-label">Core Capabilities</p>
+            <ul class="tech-capabilities-list" role="list">
+              <li class="cap-dot-green">Data access control practices</li>
+              <li class="cap-dot-green">Secure workflow design</li>
+              <li class="cap-dot-green">Information confidentiality</li>
+              <li class="cap-dot-green">Responsible data handling</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ---------------------------------------------------------------
+       SECTION 4: TECHNOLOGY APPROACH (DARK)
+  --------------------------------------------------------------- -->
+  <section class="section bg-dark-navy" id="approach" aria-labelledby="approach-heading">
+    <div class="container">
+
+      <!-- Section header -->
+      <div class="section-header section-header-dark reveal">
+        <p class="eyebrow">HOW WE THINK ABOUT TECHNOLOGY</p>
+        <h2 id="approach-heading" class="display-md" style="color:var(--white);">Practical Technology, Not Just Theory</h2>
+        <p>
+          We believe the most effective technology choices are often the most pragmatic ones.
+          Our guiding philosophy is to select tools that solve real problems reliably —
+          not to adopt technology because it sounds impressive.
+        </p>
+      </div>
+
+      <div class="tech-approach-grid">
+
+        <!-- Left: narrative text -->
+        <div class="tech-approach-text reveal reveal-left">
+          <p>
+            There is a gap between technology as it is marketed and technology as it is actually
+            used in day-to-day business operations. HAKA sits firmly on the operational side
+            of that gap. We are not technology evangelists — we are practitioners who understand
+            that the best solution is one that works reliably, can be understood by the people
+            using it, and can be maintained and improved without constant specialist intervention.
+          </p>
+          <p>
+            This pragmatic mindset shapes every technology decision we make. Before recommending
+            any tool or approach, we ask a simple question: does this solve a real problem for
+            our client, and does it do so in a way that is sustainable over time? If the answer
+            is yes, we move forward. If a simpler alternative exists, we choose it. Complexity
+            is a cost, not a feature.
+          </p>
+          <p>
+            We also recognise that technology is only as good as the people and processes
+            surrounding it. A well-designed workflow with good governance will outperform
+            an elaborate technical solution built on shaky process foundations. That is why
+            HAKA invests as much in process design and team enablement as in the selection
+            of technology tools — because the two must work together to deliver lasting value.
+          </p>
+        </div>
+
+        <!-- Right: principle mini-cards -->
+        <div class="reveal reveal-right">
+
+          <div class="tech-principle-mini-card">
+            <div class="tech-principle-mini-icon icon-wrap-blue" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <div>
+              <h4>Practicality First</h4>
+              <p>We choose tools that solve real problems reliably — not tools that simply sound impressive on paper.</p>
+            </div>
+          </div>
+
+          <div class="tech-principle-mini-card">
+            <div class="tech-principle-mini-icon icon-wrap-cyan" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <div>
+              <h4>Security-Aware</h4>
+              <p>Data protection and responsible handling are embedded into our process design from the very beginning.</p>
+            </div>
+          </div>
+
+          <div class="tech-principle-mini-card">
+            <div class="tech-principle-mini-icon" style="background:rgba(34,211,238,0.12); color:var(--cyan);" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+              </svg>
+            </div>
+            <div>
+              <h4>Scalable Design</h4>
+              <p>Every solution we build is designed to grow with the organisation — without costly re-architecture later.</p>
+            </div>
+          </div>
+
+          <div class="tech-principle-mini-card">
+            <div class="tech-principle-mini-icon" style="background:rgba(124,58,237,0.12); color:var(--light-violet);" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                <line x1="8" y1="21" x2="16" y2="21"/>
+                <line x1="12" y1="17" x2="12" y2="21"/>
+              </svg>
+            </div>
+            <div>
+              <h4>Process Integration</h4>
+              <p>Technology must integrate cleanly with existing workflows — not disrupt them unnecessarily or create new overhead.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------------------------------------------------------------
+       SECTION 5: TECH PRINCIPLES GRID (LIGHT)
+  --------------------------------------------------------------- -->
+  <section class="section bg-light" id="principles" aria-labelledby="principles-heading">
+    <div class="container">
+
+      <div class="section-header section-header-center reveal" style="max-width:640px;margin-left:auto;margin-right:auto;text-align:center;">
+        <p class="eyebrow eyebrow-dark">OUR GUIDING PHILOSOPHY</p>
+        <h2 id="principles-heading" class="display-md">Guiding Principles</h2>
+        <p>
+          These six principles underpin every technology decision we make at HAKA.
+          They reflect our commitment to being a trustworthy, practical, and
+          forward-thinking technology partner.
+        </p>
+      </div>
+
+      <div class="principles-grid">
+
+        <!-- Card 1: Proven Approaches -->
+        <div class="principle-card reveal reveal-delay-1">
+          <div class="principle-card-icon icon-wrap-blue" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+              <path d="M2 17l10 5 10-5"/>
+              <path d="M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <h3>Proven Approaches</h3>
+          <p>We favour well-tested methodologies and established practices over unproven hype — because reliability matters more than novelty.</p>
+        </div>
+
+        <!-- Card 2: Responsible AI Use -->
+        <div class="principle-card reveal reveal-delay-2">
+          <div class="principle-card-icon icon-wrap-violet" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="8" x2="12" y2="12"/>
+              <line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+          </div>
+          <h3>Responsible AI Use</h3>
+          <p>AI tools are applied transparently, with human governance and explicit acknowledgement of limitations — never as a black box.</p>
+        </div>
+
+        <!-- Card 3: Data Security -->
+        <div class="principle-card reveal reveal-delay-3">
+          <div class="principle-card-icon" style="background:rgba(16,185,129,0.10); color:#10B981; width:56px; height:56px; border-radius:var(--radius-md); display:flex; align-items:center; justify-content:center; margin:0 auto 20px;" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3>Data Security</h3>
+          <p>Client and user data is handled with strict discipline. Security awareness is embedded in process design, not bolted on afterwards.</p>
+        </div>
+
+        <!-- Card 4: Scalable Systems -->
+        <div class="principle-card reveal reveal-delay-1">
+          <div class="principle-card-icon icon-wrap-cyan" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+            </svg>
+          </div>
+          <h3>Scalable Systems</h3>
+          <p>We design with growth in mind. Every solution is built to scale gracefully as the business evolves, without requiring a complete rebuild.</p>
+        </div>
+
+        <!-- Card 5: Vendor-Neutral -->
+        <div class="principle-card reveal reveal-delay-2">
+          <div class="principle-card-icon icon-wrap-blue" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="18" cy="18" r="3"/>
+              <circle cx="6"  cy="6"  r="3"/>
+              <path d="M13 6h3a2 2 0 0 1 2 2v7"/>
+              <line x1="6" y1="9" x2="6" y2="21"/>
+            </svg>
+          </div>
+          <h3>Vendor-Neutral</h3>
+          <p>We do not favour specific vendors or platforms. Recommendations are always driven by what is most suitable for the client's context.</p>
+        </div>
+
+        <!-- Card 6: Continuous Improvement -->
+        <div class="principle-card reveal reveal-delay-3">
+          <div class="principle-card-icon icon-wrap-cyan" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="23 4 23 10 17 10"/>
+              <polyline points="1 20 1 14 7 14"/>
+              <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+            </svg>
+          </div>
+          <h3>Continuous Improvement</h3>
+          <p>Technology landscapes evolve. We stay current, adapt our approaches, and continuously look for ways to improve outcomes for our clients.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------------------------------------------------------------
+       SECTION 6: CTA (DARK)
+  --------------------------------------------------------------- -->
+  <section class="section bg-dark" id="cta" aria-labelledby="cta-heading">
+    <div class="container">
+      <div class="tech-cta-content reveal">
+        <p class="eyebrow" style="justify-content:center;">GET IN TOUCH</p>
+        <h2 id="cta-heading" class="display-md">Interested in How We Apply Technology?</h2>
+        <p>
+          Whether you want to understand which technology areas are most relevant to your
+          business, explore how automation could reduce operational overhead, or simply
+          have an honest conversation about what technology can and cannot do for you —
+          we are ready to talk.
+        </p>
+        <div class="tech-cta-actions">
+          <a href="contact.html" class="btn btn-primary btn-lg">
+            Let's Talk Technology
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+          <a href="solutions.html" class="btn btn-outline">
+            View Our Solutions
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------------------------------------------------------------
+       FOOTER
+  --------------------------------------------------------------- -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="margin-bottom:16px;display:inline-flex;">
+            <img src="assets/logo.jpeg" alt="HAKA SOLUTIONS Logo" class="nav-logo-img" />
+            <div class="nav-logo-text">
+              <span class="nav-logo-name">HAKA SOLUTIONS</span>
+              <span class="nav-logo-tagline">Technology &middot; Digital &middot; Growth</span>
+            </div>
+          </a>
+          <p>HAKA SOLUTIONS delivers reliable technology, digital operations and business support solutions designed to help organizations work smarter, scale faster and achieve sustainable growth.</p>
+          <div class="footer-social">
+          <a href="#" aria-label="LinkedIn" title="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </a>
+          <a href="#" aria-label="Instagram" title="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          <a href="#" aria-label="WhatsApp" title="WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+          </a>
+          <a href="mailto:contact@hakasolutions.com" aria-label="Email Us" title="Email Us">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </a>
+        </div>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Solutions</h4>
+          <ul>
+            <li><a href="solutions.html">Digital Operations</a></li>
+            <li><a href="solutions.html">Data Solutions</a></li>
+            <li><a href="solutions.html">Technology Solutions</a></li>
+            <li><a href="solutions.html">Business Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Case Studies</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="mailto:contact@hakasolutions.com">Email Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span class="js-year"></span> HAKA SOLUTIONS. All rights reserved.</p>
+        <nav class="footer-legal" aria-label="Legal links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms &amp; Conditions</a>
+          <a href="#">Cookie Policy</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <line x1="12" y1="19" x2="12" y2="5"/>
+      <polyline points="5 12 12 5 19 12"/>
+    </svg>
+  </button>
+
+  <!-- ---------------------------------------------------------------
+       SCRIPTS
+  --------------------------------------------------------------- -->
+  <script src="js/main.js"></script>
+
+  <script>
+    // -- Year copyright --
+    document.querySelectorAll('.js-year').forEach(function(el) {
+      el.textContent = new Date().getFullYear();
+    });
+
+    // -- Back to top button --
+    (function() {
+      var btn = document.getElementById('back-to-top');
+      if (!btn) return;
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 400) {
+          btn.classList.add('visible');
+        } else {
+          btn.classList.remove('visible');
+        }
+      }, { passive: true });
+      btn.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+
+    // -- Reveal on scroll --
+    (function() {
+      var revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+      if (!revealEls.length) return;
+
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -48px 0px' });
+
+      revealEls.forEach(function(el) {
+        observer.observe(el);
+      });
+    })();
+
+    // -- Mobile menu toggle --
+    (function() {
+      var mobileBtn  = document.querySelector('.nav-mobile-btn');
+      var mobileMenu = document.getElementById('mobile-menu');
+      var closeBtn   = document.querySelector('.mobile-menu-close');
+      var overlay    = document.querySelector('.mobile-menu-overlay');
+
+      if (!mobileBtn || !mobileMenu) return;
+
+      function openMenu() {
+        mobileMenu.classList.add('open');
+        mobileBtn.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeMenu() {
+        mobileMenu.classList.remove('open');
+        mobileBtn.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+
+      mobileBtn.addEventListener('click', openMenu);
+      if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+      if (overlay)  overlay.addEventListener('click', closeMenu);
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+          closeMenu();
+        }
+      });
+    })();
+
+    // -- Nav scroll behaviour --
+    (function() {
+      var nav = document.querySelector('.nav-wrapper');
+      if (!nav) return;
+
+      function onScroll() {
+        if (window.scrollY > 40) {
+          nav.classList.add('nav-scrolled');
+          nav.classList.remove('nav-light-mode');
+        } else {
+          nav.classList.remove('nav-scrolled');
+          nav.classList.add('nav-light-mode');
+        }
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+  </script>
+
+</body>
+</html>
