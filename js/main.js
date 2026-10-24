@@ -55,11 +55,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileMenuClose = document.querySelector('.mobile-menu-close');
   const mobileOverlay = document.querySelector('.mobile-menu-overlay');
   const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+  let savedScrollY = 0;
 
   function openMobileMenu() {
     if (!mobileMenu) return;
+    savedScrollY = window.pageYOffset || document.documentElement.scrollTop;
+    document.documentElement.classList.add('menu-open');
+    document.body.classList.add('menu-open');
+    document.body.style.top = `-${savedScrollY}px`;
     mobileMenu.classList.add('open');
-    document.body.style.overflow = 'hidden';
     if (mobileMenuBtn) mobileMenuBtn.setAttribute('aria-expanded', 'true');
     if (mobileMenuClose) mobileMenuClose.focus();
   }
@@ -67,12 +71,37 @@ document.addEventListener('DOMContentLoaded', () => {
   function closeMobileMenu() {
     if (!mobileMenu) return;
     mobileMenu.classList.remove('open');
-    document.body.style.overflow = '';
+    document.documentElement.classList.remove('menu-open');
+    document.body.classList.remove('menu-open');
+    document.body.style.top = '';
+    window.scrollTo(0, savedScrollY);
     if (mobileMenuBtn) {
       mobileMenuBtn.setAttribute('aria-expanded', 'false');
-      mobileMenuBtn.focus();
+      if (window.innerWidth <= 1366) {
+        mobileMenuBtn.focus();
+      } else {
+        mobileMenuBtn.blur();
+      }
     }
   }
+
+  // Automatically close mobile menu and restore scrolling when switching to large desktop
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 1366) {
+      if (mobileMenu && mobileMenu.classList.contains('open')) {
+        closeMobileMenu();
+      }
+      if (document.body.classList.contains('menu-open')) {
+        document.documentElement.classList.remove('menu-open');
+        document.body.classList.remove('menu-open');
+        document.body.style.top = '';
+      }
+      if (mobileMenuBtn) {
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        mobileMenuBtn.blur();
+      }
+    }
+  }, { passive: true });
 
   if (mobileMenuBtn) {
     mobileMenuBtn.addEventListener('click', openMobileMenu);
@@ -84,6 +113,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (mobileOverlay) {
     mobileOverlay.addEventListener('click', closeMobileMenu);
+    mobileOverlay.addEventListener('touchmove', (e) => {
+      e.preventDefault();
+    }, { passive: false });
   }
 
   mobileLinks.forEach(link => {
