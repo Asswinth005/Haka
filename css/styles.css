@@ -1673,15 +1673,37 @@ label {
   50% { opacity: 0.4; transform: scale(0.85); }
 }
 
-/* Simulated Mockup Stages */
-.portfolio-mockup-stage {
-  padding: 24px;
-  min-height: 230px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+/* Portfolio Single Showcase Image Container */
+.portfolio-image-container {
   position: relative;
+  width: 100%;
+  height: 240px;
   overflow: hidden;
+  background: #060e1a;
+}
+
+.portfolio-showcase-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-slow);
+}
+
+.portfolio-card:hover .portfolio-showcase-img {
+  transform: scale(1.05);
+}
+
+.portfolio-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(7, 17, 31, 0.05) 0%, rgba(7, 17, 31, 0.55) 100%);
+  pointer-events: none;
+  transition: opacity var(--transition);
+}
+
+.portfolio-card:hover .portfolio-image-overlay {
+  opacity: 0.3;
 }
 
 /* Showcase Card Content Body */
