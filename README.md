@@ -20,6 +20,7 @@ d:/HaKa/
 ├── about.html           # About Us (Mission, Vision, Values, Leadership placeholders)
 ├── services.html        # Services landing page (6 core service areas)
 ├── solutions.html       # Solutions landing page (5 featured solutions)
+├── portfolio.html       # Portfolio & Showcases (6 interactive industry showcases)
 ├── technology.html      # Technology focus areas (Data, Cloud, Automation, AI, Security)
 ├── careers.html         # Careers & Culture (Discipline, Teamwork, Demo Application Form)
 ├── contact.html         # Contact page (Official address, Demo Inquiry Form)
@@ -84,3 +85,10 @@ Then navigate to `http://localhost:8000` in your browser.
 - **Frontend Prototype Disclosure**: Contact and Career forms feature explicit alerts explaining that no data is transmitted or stored.
 - **Accessibility & UX**: Semantic HTML5 elements, ARIA attributes, keyboard-navigable drawer, visible focus indicators, and `prefers-reduced-motion` compliance.
 - **Responsive Across Devices**: Fully tested for 1920px desktop down to 375px mobile displays.
+- **Dedicated Portfolio Ecosystem**: Features 6 interactive showcases:
+  1. *Luxury Fashion E-Commerce Showcase*
+  2. *TS Landscaping & Construction Site*
+  3. *Healthcare Provider Clinic Network*
+  4. *Grand Event & Conference Hub*
+  5. *Real Estate Property Portal*
+  6. *Premium Restaurant & Café Platform*

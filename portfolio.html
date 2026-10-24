@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio &amp; Digital Showcases | HAKA SOLUTIONS</title>
+  <meta name="description" content="Explore HAKA SOLUTIONS' featured work and digital showcases across Luxury E-Commerce, Construction, Healthcare, Event Summits, Real Estate, and Hospitality." />
+  <meta property="og:title" content="Portfolio &amp; Digital Showcases | HAKA SOLUTIONS" />
+  <meta property="og:description" content="High-performance digital platforms, custom web architectures, and tailored business solutions engineered by HAKA SOLUTIONS." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://hakasolutions.com/portfolio.html" />
+  <link rel="canonical" href="https://hakasolutions.com/portfolio.html" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+  <!-- Google Fonts: Inter & Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <style>
+    /* Custom Showcase-Specific Micro-Component Styling */
+    .mockup-luxury-bg {
+      background: radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.15), transparent 50%),
+                  radial-gradient(circle at 20% 80%, rgba(37, 99, 235, 0.2), transparent 50%),
+                  #070D18;
+    }
+    .mockup-construction-bg {
+      background: radial-gradient(circle at 75% 25%, rgba(16, 185, 129, 0.15), transparent 50%),
+                  radial-gradient(circle at 20% 75%, rgba(245, 158, 11, 0.15), transparent 50%),
+                  #08121E;
+    }
+    .mockup-healthcare-bg {
+      background: radial-gradient(circle at 80% 30%, rgba(34, 211, 238, 0.18), transparent 55%),
+                  radial-gradient(circle at 15% 70%, rgba(37, 99, 235, 0.2), transparent 50%),
+                  #071424;
+    }
+    .mockup-event-bg {
+      background: radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.25), transparent 55%),
+                  radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.22), transparent 50%),
+                  #090E20;
+    }
+    .mockup-realestate-bg {
+      background: radial-gradient(circle at 70% 30%, rgba(59, 130, 246, 0.2), transparent 50%),
+                  radial-gradient(circle at 25% 75%, rgba(20, 184, 166, 0.15), transparent 50%),
+                  #0A1322;
+    }
+    .mockup-restaurant-bg {
+      background: radial-gradient(circle at 75% 25%, rgba(249, 115, 22, 0.2), transparent 55%),
+                  radial-gradient(circle at 20% 80%, rgba(234, 179, 8, 0.15), transparent 50%),
+                  #110E18;
+    }
+
+    .interactive-slider-track {
+      width: 100%;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+      position: relative;
+    }
+    .interactive-slider-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--cyan), var(--electric-blue));
+      border-radius: 4px;
+    }
+
+    .stat-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 8px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--white);
+    }
+  </style>
+</head>
+<body class="dark-bg">
+
+  <!-- ============================================================
+       NAVIGATION HEADER
+       ============================================================ -->
+  <nav class="nav-wrapper nav-scrolled" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="HAKA SOLUTIONS - Home">
+        <img src="assets/logo.jpeg" alt="HAKA SOLUTIONS Logo" class="nav-logo-img" />
+        <div class="nav-logo-text">
+          <span class="nav-logo-name">HAKA SOLUTIONS</span>
+          <span class="nav-logo-tagline">Technology &middot; Digital &middot; Growth</span>
+        </div>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="solutions.html" class="nav-link">Solutions</a></li>
+        <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+        <li><a href="technology.html" class="nav-link">Technology</a></li>
+        <li><a href="careers.html" class="nav-link">Careers</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn-primary btn-sm nav-cta">Let's Talk</a>
+      <button class="nav-mobile-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu-panel">
+      <div class="mobile-menu-header">
+        <a href="index.html" class="nav-logo">
+          <img src="assets/logo.jpeg" alt="HAKA SOLUTIONS Logo" class="nav-logo-img" />
+          <div class="nav-logo-text">
+            <span class="nav-logo-name">HAKA SOLUTIONS</span>
+            <span class="nav-logo-tagline">Technology &middot; Digital &middot; Growth</span>
+          </div>
+        </a>
+        <button class="mobile-menu-close" aria-label="Close navigation menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <nav class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <a href="about.html" class="mobile-nav-link">About Us</a>
+        <a href="services.html" class="mobile-nav-link">Services</a>
+        <a href="solutions.html" class="mobile-nav-link">Solutions</a>
+        <a href="portfolio.html" class="mobile-nav-link active">Portfolio</a>
+        <a href="technology.html" class="mobile-nav-link">Technology</a>
+        <a href="careers.html" class="mobile-nav-link">Careers</a>
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+      </nav>
+      <div class="mobile-menu-footer">
+        <a href="contact.html" class="btn btn-primary w-full">Let's Talk</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       HERO SECTION
+       ============================================================ -->
+  <section class="page-hero">
+    <div class="container text-center">
+      <div class="eyebrow mx-auto mb-4">OUR PORTFOLIO</div>
+      <h1 class="display-lg mb-6">
+        Featured Work &amp; <span class="gradient-text">Digital Showcases</span>
+      </h1>
+      <p class="hero-subtext mx-auto mb-8" style="max-width: 720px; font-size: 1.15rem; color: var(--text-pale); line-height: 1.7;">
+        Explore our curated collection of high-performance digital platforms, custom web architectures, and tailored business solutions engineered for modern enterprises across leading industries.
+      </p>
+
+      <!-- Key Metrics Strip -->
+      <div class="flex flex-wrap items-center justify-center gap-4 mt-6">
+        <span class="stat-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-cyan-400"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          6 Custom Showcases
+        </span>
+        <span class="stat-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-emerald-400"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+          &lt; 0.8s Target LCP
+        </span>
+        <span class="stat-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-blue-400"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          100% Fully Responsive
+        </span>
+        <span class="stat-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-purple-400"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Zero-Bloat Frontend Stack
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SHOWCASE GRID SECTION WITH INTERACTIVE FILTER
+       ============================================================ -->
+  <section class="section bg-dark">
+    <div class="container">
+
+      <!-- Section Header -->
+      <div class="section-header text-center mb-10">
+        <div class="eyebrow mx-auto mb-3">CURATED DIGITAL EXCELLENCE</div>
+        <h2 class="display-md text-white mb-4">Explore Our Project Ecosystem</h2>
+        <p class="text-muted mx-auto max-w-2xl text-center">
+          Filter through our industry-specific implementations to see how HAKA SOLUTIONS bridges design elegance, architectural discipline, and high-speed execution.
+        </p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="portfolio-filters" id="portfolio-filters" role="tablist" aria-label="Portfolio category filter">
+        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Projects (6)</button>
+        <button class="filter-btn" data-filter="ecommerce" role="tab" aria-selected="false">E-Commerce &amp; Retail</button>
+        <button class="filter-btn" data-filter="commercial" role="tab" aria-selected="false">Commercial &amp; Civil</button>
+        <button class="filter-btn" data-filter="healthcare" role="tab" aria-selected="false">Healthcare &amp; Clinical</button>
+        <button class="filter-btn" data-filter="events" role="tab" aria-selected="false">Events &amp; Summits</button>
+        <button class="filter-btn" data-filter="realestate" data-filter2="hospitality" role="tab" aria-selected="false">Real Estate &amp; Hospitality</button>
+      </div>
+
+      <!-- The 6 Portfolio Showcases -->
+      <div class="portfolio-grid" id="portfolio-grid">
+
+        <!-- ---------------------------------------------------------------
+             SHOWCASE 1: Luxury Fashion E-Commerce Showcase
+        --------------------------------------------------------------- -->
+        <article class="portfolio-card" data-category="ecommerce">
+          <!-- Chrome Header & Mockup Stage -->
+          <div class="portfolio-preview-frame">
+            <div class="portfolio-chrome-bar">
+              <div class="chrome-dots">
+                <span class="chrome-dot red"></span>
+                <span class="chrome-dot yellow"></span>
+                <span class="chrome-dot green"></span>
+              </div>
+              <div class="chrome-url">https://showcase.hakasolutions.com/luxury-fashion</div>
+              <span class="chrome-status-badge status-live">Live Preview</span>
+            </div>
+
+            <!-- Simulated High-End Fashion UI -->
+            <div class="portfolio-mockup-stage mockup-luxury-bg">
+              <div class="flex justify-between items-center mb-4 pb-3 border-b border-white/10">
+                <div class="flex items-center gap-3">
+                  <span class="text-xs font-serif tracking-widest text-amber-200 uppercase font-semibold">MAISON VÉRITÉ</span>
+                  <span class="text-[10px] text-gray-400">· Autumn / Winter Edition</span>
+                </div>
+                <div class="flex items-center gap-2 text-xs text-gray-300">
+                  <span class="px-2 py-0.5 rounded bg-white/10 text-[10px]">USD $</span>
+                  <span class="px-2 py-0.5 rounded bg-amber-400/20 text-amber-300 font-semibold text-[10px]">Bag (3)</span>
+                </div>
+              </div>
+
+              <!-- Product Preview Card Grid -->
+              <div class="grid grid-cols-2 gap-3">
+                <div class="bg-black/40 border border-white/10 rounded-lg p-3 hover:border-amber-400/40 transition">
+                  <div class="h-20 bg-gradient-to-tr from-slate-900 to-amber-950/40 rounded flex items-center justify-center mb-2 relative overflow-hidden">
+                    <span class="text-[11px] text-amber-200/80 tracking-wider">Atelier Wool Coat</span>
+                    <span class="absolute top-1 right-1 bg-amber-500/20 text-amber-300 text-[9px] px-1.5 py-0.5 rounded">NEW</span>
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <span class="text-xs font-medium text-white">$1,450</span>
+                    <span class="text-[10px] text-cyan-400">Quick View &rarr;</span>
+                  </div>
+                </div>
+
+                <div class="bg-black/40 border border-white/10 rounded-lg p-3 hover:border-amber-400/40 transition">
+                  <div class="h-20 bg-gradient-to-tr from-slate-900 to-indigo-950/40 rounded flex items-center justify-center mb-2 relative overflow-hidden">
+                    <span class="text-[11px] text-indigo-200/80 tracking-wider">Silk Pleated Dress</span>
+                    <span class="absolute top-1 right-1 bg-emerald-500/20 text-emerald-300 text-[9px] px-1.5 py-0.5 rounded">In Stock</span>
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <span class="text-xs font-medium text-white">$920</span>
+                    <span class="text-[10px] text-cyan-400">Quick View &rarr;</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Interactive Badge -->
+              <div class="mt-4 flex items-center justify-between text-[11px] text-gray-400 bg-black/60 px-3 py-1.5 rounded-md border border-white/5">
+                <span>Micro-Interactions: <strong>Active</strong></span>
+                <span class="text-emerald-400 font-mono">0.68s LCP Verified</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Body -->
+          <div class="portfolio-card-body">
+            <span class="portfolio-category-tag">E-Commerce &amp; Retail Solutions</span>
+            <h3 class="portfolio-card-title">Luxury Fashion E-Commerce Showcase</h3>
+            <p class="portfolio-card-desc">
+              An immersive digital storefront crafted for premier couture and high-end retail brands. Features instant client-side faceted filtering, high-resolution lookbook galleries, real-time cart state management, and elegant micro-animations.
+            </p>
+
+            <ul class="portfolio-features-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Instant client-side filter engine with multi-currency toggle</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Dynamic lookbook modal drawer with zoom and fit-guide</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Zero-latency checkout cart simulator with localStorage sync</span>
+              </li>
+            </ul>
+
+            <div class="portfolio-tech-tags">
+              <span class="tech-tag">HTML5 / Vanilla JS</span>
+              <span class="tech-tag">Tailwind CSS</span>
+              <span class="tech-tag">High-DPI WebP</span>
+              <span class="tech-tag">CSS Grid UI</span>
+              <span class="tech-tag">Micro-Interactions</span>
+            </div>
+
+            <div class="portfolio-card-actions">
+              <button class="btn btn-primary btn-sm open-details-btn" data-project="luxury-fashion">
+                Inspect Specs &amp; Flow
+              </button>
+              <a href="#showcase-modal" class="btn btn-outline btn-sm open-details-btn" data-project="luxury-fashion">
+                Live Concept
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ---------------------------------------------------------------
+             SHOWCASE 2: TS Landscaping & Construction Site
+        --------------------------------------------------------------- -->
+        <article class="portfolio-card" data-category="commercial">
+          <!-- Chrome Header & Mockup Stage -->
+          <div class="portfolio-preview-frame">
+            <div class="portfolio-chrome-bar">
+              <div class="chrome-dots">
+                <span class="chrome-dot red"></span>
+                <span class="chrome-dot yellow"></span>
+                <span class="chrome-dot green"></span>
+              </div>
+              <div class="chrome-url">https://showcase.hakasolutions.com/ts-landscaping-construction</div>
+              <span class="chrome-status-badge status-live">Live Preview</span>
+            </div>
+
+            <!-- Simulated Construction & Civil Portal UI -->
+            <div class="portfolio-mockup-stage mockup-construction-bg">
+              <div class="flex justify-between items-center mb-3">
+                <div class="flex items-center gap-2">
+                  <div class="w-6 h-6 rounded bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center text-emerald-400 font-bold text-xs">TS</div>
+                  <span class="text-xs font-bold tracking-wide text-white">TS LANDSCAPING &amp; CIVIL</span>
+                </div>
+                <span class="text-[10px] bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded border border-amber-500/30">Commercial Tier A</span>
+              </div>
+
+              <!-- Interactive Quote Estimator Simulator -->
+              <div class="bg-black/50 border border-emerald-500/20 rounded-lg p-3 mb-2">
+                <div class="flex justify-between text-xs text-gray-300 mb-1.5">
+                  <span>Project Scope: Commercial Hardscape</span>
+                  <span class="text-emerald-400 font-semibold font-mono" id="demo-ts-cost">$28,500 Est.</span>
+                </div>
+                <div class="interactive-slider-track mb-2">
+                  <div class="interactive-slider-fill" style="width: 65%;"></div>
+                </div>
+                <div class="grid grid-cols-3 gap-2 text-[10px] text-gray-400">
+                  <div class="bg-white/5 p-1 rounded text-center">🚜 Fleet: 24 Heavy Units</div>
+                  <div class="bg-white/5 p-1 rounded text-center">📐 4,800 sq.ft</div>
+                  <div class="bg-white/5 p-1 rounded text-center text-cyan-300">⚡ 2-Week Turnaround</div>
+                </div>
+              </div>
+
+              <div class="flex justify-between items-center text-[11px] text-gray-300 bg-white/5 px-2.5 py-1 rounded border border-white/5">
+                <span>Before/After Transformation Slider: <strong>Interactive</strong></span>
+                <span class="text-amber-400">OSHA &amp; ISO Compliant</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Body -->
+          <div class="portfolio-card-body">
+            <span class="portfolio-category-tag">Commercial &amp; Civil Engineering</span>
+            <h3 class="portfolio-card-title">TS Landscaping &amp; Construction Site</h3>
+            <p class="portfolio-card-desc">
+              A robust corporate digital presence built for a heavy commercial civil contractor and landscape architecture firm. Incorporates dynamic project cost estimation calculators, machinery fleet galleries, and interactive transformation showcases.
+            </p>
+
+            <ul class="portfolio-features-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Interactive client project cost &amp; square-footage estimation widget</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Before-and-after transformation interactive image compare tool</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Heavy machinery fleet catalog &amp; commercial compliance badges</span>
+              </li>
+            </ul>
+
+            <div class="portfolio-tech-tags">
+              <span class="tech-tag">HTML5 Architecture</span>
+              <span class="tech-tag">Custom JS Estimator</span>
+              <span class="tech-tag">Responsive Sliders</span>
+              <span class="tech-tag">Tailwind CSS</span>
+              <span class="tech-tag">SVG Blueprints</span>
+            </div>
+
+            <div class="portfolio-card-actions">
+              <button class="btn btn-primary btn-sm open-details-btn" data-project="ts-landscaping">
+                Inspect Specs &amp; Flow
+              </button>
+              <a href="#showcase-modal" class="btn btn-outline btn-sm open-details-btn" data-project="ts-landscaping">
+                Live Concept
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ---------------------------------------------------------------
+             SHOWCASE 3: Healthcare Provider Clinic Network
+        --------------------------------------------------------------- -->
+        <article class="portfolio-card" data-category="healthcare">
+          <!-- Chrome Header & Mockup Stage -->
+          <div class="portfolio-preview-frame">
+            <div class="portfolio-chrome-bar">
+              <div class="chrome-dots">
+                <span class="chrome-dot red"></span>
+                <span class="chrome-dot yellow"></span>
+                <span class="chrome-dot green"></span>
+              </div>
+              <div class="chrome-url">https://showcase.hakasolutions.com/healthcare-clinic-network</div>
+              <span class="chrome-status-badge status-live">Live Preview</span>
+            </div>
+
+            <!-- Simulated Medical Portal UI -->
+            <div class="portfolio-mockup-stage mockup-healthcare-bg">
+              <div class="flex justify-between items-center mb-3">
+                <div class="flex items-center gap-2">
+                  <div class="w-6 h-6 rounded bg-cyan-500/20 border border-cyan-400/40 flex items-center justify-center text-cyan-400 font-bold text-xs">
+                    +
+                  </div>
+                  <span class="text-xs font-bold tracking-wide text-white">CLINICARE NETWORK PORTAL</span>
+                </div>
+                <span class="text-[10px] bg-cyan-500/20 text-cyan-300 px-2 py-0.5 rounded border border-cyan-500/30">HIPAA Compliant UI</span>
+              </div>
+
+              <!-- Interactive Doctor Appointment Stepper -->
+              <div class="bg-black/50 border border-cyan-500/20 rounded-lg p-3 mb-2">
+                <div class="flex justify-between items-center text-xs text-white mb-2 pb-1.5 border-b border-white/10">
+                  <span class="font-medium">Dr. Elena Ramos, MD — Cardiology</span>
+                  <span class="text-emerald-400 text-[10px] font-mono">Available Today</span>
+                </div>
+
+                <div class="grid grid-cols-4 gap-1.5 text-center mb-2">
+                  <span class="py-1 px-1 bg-white/5 rounded text-[10px] text-gray-400">09:30 AM</span>
+                  <span class="py-1 px-1 bg-cyan-500/30 text-cyan-200 border border-cyan-400/40 rounded text-[10px] font-semibold">11:00 AM</span>
+                  <span class="py-1 px-1 bg-white/5 rounded text-[10px] text-gray-400">02:15 PM</span>
+                  <span class="py-1 px-1 bg-white/5 rounded text-[10px] text-gray-400">04:45 PM</span>
+                </div>
+
+                <div class="flex items-center justify-between text-[10px] text-gray-300">
+                  <span>📍 4 Network Facilities</span>
+                  <span class="text-cyan-300">Instant SMS Confirmation Prototype &rarr;</span>
+                </div>
+              </div>
+
+              <div class="flex justify-between items-center text-[11px] text-gray-300 bg-white/5 px-2.5 py-1 rounded border border-white/5">
+                <span>Accessibility Grade: <strong>WCAG 2.1 AA</strong></span>
+                <span class="text-emerald-400 font-mono">100% Screen Reader Tested</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Body -->
+          <div class="portfolio-card-body">
+            <span class="portfolio-category-tag">Healthcare &amp; Clinical Portals</span>
+            <h3 class="portfolio-card-title">Healthcare Provider Clinic Network</h3>
+            <p class="portfolio-card-desc">
+              A patient-centric portal engineered for multi-specialty medical clinics and hospital groups. Offers accessible doctor availability calendars, automated appointment flow validation, clinic geolocation, and triage intake forms.
+            </p>
+
+            <ul class="portfolio-features-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Interactive doctor scheduling calendar with multi-timeslot picker</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Patient symptom triage intake with client-side field validation</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Multi-clinic geographic facility finder with interactive directions</span>
+              </li>
+            </ul>
+
+            <div class="portfolio-tech-tags">
+              <span class="tech-tag">WCAG 2.1 AA Accessible</span>
+              <span class="tech-tag">Vanilla JS Scheduling</span>
+              <span class="tech-tag">Tailwind CSS</span>
+              <span class="tech-tag">HTML5 Forms</span>
+              <span class="tech-tag">Zero Backend Storage</span>
+            </div>
+
+            <div class="portfolio-card-actions">
+              <button class="btn btn-primary btn-sm open-details-btn" data-project="healthcare-network">
+                Inspect Specs &amp; Flow
+              </button>
+              <a href="#showcase-modal" class="btn btn-outline btn-sm open-details-btn" data-project="healthcare-network">
+                Live Concept
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ---------------------------------------------------------------
+             SHOWCASE 4: Grand Event & Conference Hub
+        --------------------------------------------------------------- -->
+        <article class="portfolio-card" data-category="events">
+          <!-- Chrome Header & Mockup Stage -->
+          <div class="portfolio-preview-frame">
+            <div class="portfolio-chrome-bar">
+              <div class="chrome-dots">
+                <span class="chrome-dot red"></span>
+                <span class="chrome-dot yellow"></span>
+                <span class="chrome-dot green"></span>
+              </div>
+              <div class="chrome-url">https://showcase.hakasolutions.com/grand-event-conference</div>
+              <span class="chrome-status-badge status-live">Live Preview</span>
+            </div>
+
+            <!-- Simulated Tech Conference UI -->
+            <div class="portfolio-mockup-stage mockup-event-bg">
+              <div class="flex justify-between items-center mb-3">
+                <div class="flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-purple-500 animate-ping"></span>
+                  <span class="text-xs font-bold tracking-wide text-white uppercase font-display">GLOBAL TECH SUMMIT 2026</span>
+                </div>
+                <span class="text-[10px] bg-purple-500/20 text-purple-300 px-2 py-0.5 rounded border border-purple-500/30">3 Days · 48 Keynotes</span>
+              </div>
+
+              <!-- Interactive Schedule Matrix Prototype -->
+              <div class="bg-black/55 border border-purple-500/25 rounded-lg p-3 mb-2">
+                <div class="flex gap-2 text-[10px] mb-2 border-b border-white/10 pb-1.5">
+                  <span class="bg-purple-600 text-white px-2 py-0.5 rounded font-semibold">Track 1: Cloud &amp; AI</span>
+                  <span class="text-gray-400 px-2 py-0.5">Track 2: Security</span>
+                  <span class="text-gray-400 px-2 py-0.5">Track 3: Fintech</span>
+                </div>
+
+                <div class="space-y-1.5">
+                  <div class="flex justify-between items-center text-xs bg-white/5 p-1.5 rounded">
+                    <div>
+                      <span class="text-purple-300 font-semibold text-[11px]">10:00 AM — Main Stage</span>
+                      <p class="text-[10px] text-gray-300">The Next Era of Autonomous Enterprise Architectures</p>
+                    </div>
+                    <span class="text-[9px] bg-emerald-500/20 text-emerald-300 px-1.5 py-0.5 rounded">Live Stream</span>
+                  </div>
+                </div>
+
+                <div class="flex justify-between items-center text-[10px] text-gray-400 mt-2">
+                  <span>Speakers: 64 Executives</span>
+                  <span class="text-purple-300 font-semibold">Tiered Passes: VIP / Pro / Virtual</span>
+                </div>
+              </div>
+
+              <div class="flex justify-between items-center text-[11px] text-gray-300 bg-white/5 px-2.5 py-1 rounded border border-white/5">
+                <span>Concurrent Viewer Load: <strong>10,000+</strong></span>
+                <span class="text-cyan-400 font-mono">0ms Track Latency</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Body -->
+          <div class="portfolio-card-body">
+            <span class="portfolio-category-tag">Events &amp; Multi-Track Summits</span>
+            <h3 class="portfolio-card-title">Grand Event &amp; Conference Hub</h3>
+            <p class="portfolio-card-desc">
+              A high-impact event experience platform engineered for international conventions, technology expos, and hybrid symposiums. Features multi-track agenda matrices, keynote speaker bio drawers, and interactive pass tier selectors.
+            </p>
+
+            <ul class="portfolio-features-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Interactive multi-track agenda timeline with instant category filtering</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Keynote speaker roster with popup bio dossiers and session bookmarks</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Live event countdown timer and interactive tiered pass selector</span>
+              </li>
+            </ul>
+
+            <div class="portfolio-tech-tags">
+              <span class="tech-tag">HTML5 Semantic</span>
+              <span class="tech-tag">CSS Grid Timelines</span>
+              <span class="tech-tag">Vanilla JS Dynamic Tabs</span>
+              <span class="tech-tag">Tailwind CSS</span>
+              <span class="tech-tag">SVG Venue Layouts</span>
+            </div>
+
+            <div class="portfolio-card-actions">
+              <button class="btn btn-primary btn-sm open-details-btn" data-project="grand-event">
+                Inspect Specs &amp; Flow
+              </button>
+              <a href="#showcase-modal" class="btn btn-outline btn-sm open-details-btn" data-project="grand-event">
+                Live Concept
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ---------------------------------------------------------------
+             SHOWCASE 5: Real Estate Property Portal
+        --------------------------------------------------------------- -->
+        <article class="portfolio-card" data-category="realestate">
+          <!-- Chrome Header & Mockup Stage -->
+          <div class="portfolio-preview-frame">
+            <div class="portfolio-chrome-bar">
+              <div class="chrome-dots">
+                <span class="chrome-dot red"></span>
+                <span class="chrome-dot yellow"></span>
+                <span class="chrome-dot green"></span>
+              </div>
+              <div class="chrome-url">https://showcase.hakasolutions.com/real-estate-property-portal</div>
+              <span class="chrome-status-badge status-live">Live Preview</span>
+            </div>
+
+            <!-- Simulated Luxury Real Estate UI -->
+            <div class="portfolio-mockup-stage mockup-realestate-bg">
+              <div class="flex justify-between items-center mb-3">
+                <div class="flex items-center gap-2">
+                  <span class="text-xs font-bold tracking-widest text-cyan-300 font-display">AURA PROPERTIES</span>
+                  <span class="text-[10px] text-gray-400">· Beverly Crest</span>
+                </div>
+                <span class="text-[10px] bg-cyan-500/20 text-cyan-300 px-2 py-0.5 rounded border border-cyan-500/30">Exclusive Mandate</span>
+              </div>
+
+              <!-- Interactive Property Listing & Mortgage Calculator Card -->
+              <div class="bg-black/55 border border-cyan-500/20 rounded-lg p-3 mb-2">
+                <div class="flex justify-between items-start mb-2">
+                  <div>
+                    <h4 class="text-xs font-semibold text-white">The Horizon Azure Villa</h4>
+                    <span class="text-[10px] text-gray-400">5 Beds · 6 Baths · 7,200 sq.ft</span>
+                  </div>
+                  <div class="text-right">
+                    <span class="text-xs font-bold text-cyan-400">$4,850,000</span>
+                    <span class="block text-[9px] text-gray-400">~$19,420/mo</span>
+                  </div>
+                </div>
+
+                <!-- Interactive Mortgage Slider Bar -->
+                <div class="bg-white/5 p-2 rounded text-[10px] space-y-1">
+                  <div class="flex justify-between text-gray-300">
+                    <span>Mortgage Calculator Demo (20% Down, 6.5% APR)</span>
+                    <span class="text-emerald-400 font-mono font-semibold" id="demo-realestate-val">$19,420/mo</span>
+                  </div>
+                  <div class="interactive-slider-track">
+                    <div class="interactive-slider-fill" style="width: 55%;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex justify-between items-center text-[11px] text-gray-300 bg-white/5 px-2.5 py-1 rounded border border-white/5">
+                <span>Interactive Floorplan Hotspots: <strong>Active</strong></span>
+                <span class="text-cyan-300">HD Virtual Tour Ready</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Body -->
+          <div class="portfolio-card-body">
+            <span class="portfolio-category-tag">Real Estate &amp; Architecture</span>
+            <h3 class="portfolio-card-title">Real Estate Property Portal</h3>
+            <p class="portfolio-card-desc">
+              An architectural showcase portal designed for luxury residential estates, commercial developments, and high-value brokers. Equipped with instant mortgage estimation sliders, interactive floorplan hot-spots, and responsive inquiry drawers.
+            </p>
+
+            <ul class="portfolio-features-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Dynamic real-time mortgage payment calculator with adjustable inputs</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Interactive architectural floorplan viewer with room dimension callouts</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Neighborhood amenity radar with school ratings and transit indices</span>
+              </li>
+            </ul>
+
+            <div class="portfolio-tech-tags">
+              <span class="tech-tag">HTML5 / Vanilla JS</span>
+              <span class="tech-tag">Client Mortgage Engine</span>
+              <span class="tech-tag">Tailwind CSS</span>
+              <span class="tech-tag">SVG Floorplans</span>
+              <span class="tech-tag">Touch Responsive UX</span>
+            </div>
+
+            <div class="portfolio-card-actions">
+              <button class="btn btn-primary btn-sm open-details-btn" data-project="real-estate">
+                Inspect Specs &amp; Flow
+              </button>
+              <a href="#showcase-modal" class="btn btn-outline btn-sm open-details-btn" data-project="real-estate">
+                Live Concept
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ---------------------------------------------------------------
+             SHOWCASE 6: Premium Restaurant & Café Platform
+        --------------------------------------------------------------- -->
+        <article class="portfolio-card" data-category="hospitality">
+          <!-- Chrome Header & Mockup Stage -->
+          <div class="portfolio-preview-frame">
+            <div class="portfolio-chrome-bar">
+              <div class="chrome-dots">
+                <span class="chrome-dot red"></span>
+                <span class="chrome-dot yellow"></span>
+                <span class="chrome-dot green"></span>
+              </div>
+              <div class="chrome-url">https://showcase.hakasolutions.com/premium-restaurant-cafe</div>
+              <span class="chrome-status-badge status-live">Live Preview</span>
+            </div>
+
+            <!-- Simulated Artisan Culinary UI -->
+            <div class="portfolio-mockup-stage mockup-restaurant-bg">
+              <div class="flex justify-between items-center mb-3">
+                <div class="flex items-center gap-2">
+                  <span class="text-xs font-serif italic tracking-wider text-amber-200">L'ATELIER CULINAIRE</span>
+                  <span class="text-[10px] text-gray-400">· Michelin Recommended</span>
+                </div>
+                <span class="text-[10px] bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded border border-amber-500/30">Table Booking Live</span>
+              </div>
+
+              <!-- Interactive Reservation & Menu Teaser -->
+              <div class="bg-black/55 border border-amber-500/20 rounded-lg p-3 mb-2">
+                <div class="flex justify-between items-center text-xs text-white mb-2 pb-1 border-b border-white/10">
+                  <span class="font-medium">Table Reservation: 2 Guests</span>
+                  <span class="text-amber-400 text-[10px]">Today, 7:30 PM Selected</span>
+                </div>
+
+                <div class="grid grid-cols-2 gap-2 text-[10px] mb-2">
+                  <div class="bg-white/5 p-1.5 rounded">
+                    <span class="text-amber-300 font-semibold block">Truffle Agnolotti</span>
+                    <span class="text-gray-400">Aged Parmesan, Brown Butter · $42</span>
+                  </div>
+                  <div class="bg-white/5 p-1.5 rounded">
+                    <span class="text-amber-300 font-semibold block">Wagyu Ribeye Cap</span>
+                    <span class="text-gray-400">Parsnip Purée, Port Glaze · $78</span>
+                  </div>
+                </div>
+
+                <div class="flex justify-between items-center text-[10px] text-gray-300">
+                  <span>Dietary Filters: <strong>GF, Vegan, Halal</strong></span>
+                  <span class="text-amber-300">Sommelier Notes Attached &rarr;</span>
+                </div>
+              </div>
+
+              <div class="flex justify-between items-center text-[11px] text-gray-300 bg-white/5 px-2.5 py-1 rounded border border-white/5">
+                <span>Digital Menu Experience: <strong>Instant Search</strong></span>
+                <span class="text-emerald-400 font-mono">Instant Confirmation</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Body -->
+          <div class="portfolio-card-body">
+            <span class="portfolio-category-tag">Hospitality &amp; Culinary Platforms</span>
+            <h3 class="portfolio-card-title">Premium Restaurant &amp; Café Platform</h3>
+            <p class="portfolio-card-desc">
+              An elegant gastronomy platform designed for fine-dining restaurants, artisan bistros, and café chains. Integrates interactive categorized digital menus with allergen indicators, table reservation booking simulators, and private event inquiry systems.
+            </p>
+
+            <ul class="portfolio-features-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Filterable interactive digital menu with dietary &amp; allergen tags</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Real-time table reservation simulator with date, time, and party size</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Curated wine-pairing notes and chef's tasting menu showcase</span>
+              </li>
+            </ul>
+
+            <div class="portfolio-tech-tags">
+              <span class="tech-tag">HTML5 / Vanilla JS</span>
+              <span class="tech-tag">Tailwind CSS</span>
+              <span class="tech-tag">Reservation UX</span>
+              <span class="tech-tag">Mobile-First Touch</span>
+              <span class="tech-tag">Dietary Filter System</span>
+            </div>
+
+            <div class="portfolio-card-actions">
+              <button class="btn btn-primary btn-sm open-details-btn" data-project="restaurant-platform">
+                Inspect Specs &amp; Flow
+              </button>
+              <a href="#showcase-modal" class="btn btn-outline btn-sm open-details-btn" data-project="restaurant-platform">
+                Live Concept
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       OUR ENGINEERING PROCESS (HOW WE DELIVER)
+       ============================================================ -->
+  <section class="section bg-midnight">
+    <div class="container">
+      <div class="section-header text-center mb-12">
+        <div class="eyebrow mx-auto mb-3">OUR METHODOLOGY</div>
+        <h2 class="display-md text-white mb-4">How We Engineer Digital Showcases</h2>
+        <p class="text-muted mx-auto max-w-2xl text-center">
+          Every project delivered by HAKA SOLUTIONS adheres to strict technical discipline, performance benchmarks, and bespoke visual design.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Step 1 -->
+        <div class="card card-dark p-6 flex flex-col justify-between">
+          <div>
+            <div class="text-2xl font-bold font-mono text-cyan-400 mb-3">01</div>
+            <h4 class="text-lg font-bold text-white mb-2">Discovery &amp; Architecture</h4>
+            <p class="text-sm text-gray-400 leading-relaxed">
+              We define precise business requirements, user journey maps, and high-performance frontend architecture patterns before writing code.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-white/10 text-xs text-cyan-300 flex items-center gap-1.5">
+            <span>Milestone: Specs &amp; Blueprints</span>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="card card-dark p-6 flex flex-col justify-between">
+          <div>
+            <div class="text-2xl font-bold font-mono text-blue-400 mb-3">02</div>
+            <h4 class="text-lg font-bold text-white mb-2">Design &amp; Prototyping</h4>
+            <p class="text-sm text-gray-400 leading-relaxed">
+              We engineer bespoke UI/UX designs featuring tailored color palettes, strong visual hierarchies, and responsive micro-interactions.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-white/10 text-xs text-blue-300 flex items-center gap-1.5">
+            <span>Milestone: Interactive Prototypes</span>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="card card-dark p-6 flex flex-col justify-between">
+          <div>
+            <div class="text-2xl font-bold font-mono text-indigo-400 mb-3">03</div>
+            <h4 class="text-lg font-bold text-white mb-2">Frontend Engineering</h4>
+            <p class="text-sm text-gray-400 leading-relaxed">
+              We construct clean, semantic HTML5, utility-driven CSS, and zero-bloat Vanilla JavaScript to achieve maximum execution speed.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-white/10 text-xs text-indigo-300 flex items-center gap-1.5">
+            <span>Milestone: Pure Static Codebase</span>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="card card-dark p-6 flex flex-col justify-between">
+          <div>
+            <div class="text-2xl font-bold font-mono text-emerald-400 mb-3">04</div>
+            <h4 class="text-lg font-bold text-white mb-2">Speed &amp; Accessibility</h4>
+            <p class="text-sm text-gray-400 leading-relaxed">
+              We test cross-browser compatibility, WCAG 2.1 accessibility benchmarks, and Lighthouse performance metrics prior to handoff.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-white/10 text-xs text-emerald-300 flex items-center gap-1.5">
+            <span>Milestone: 100/100 Lighthouse</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CALL TO ACTION SECTION
+       ============================================================ -->
+  <section class="section bg-dark text-center">
+    <div class="container">
+      <div class="max-w-3xl mx-auto">
+        <div class="eyebrow mx-auto mb-4">START YOUR DIGITAL SHOWCASE</div>
+        <h2 class="display-md text-white mb-6">
+          Ready to Bring Your Vision to Life?
+        </h2>
+        <p class="text-muted text-lg mb-8 leading-relaxed">
+          Whether you need a high-conversion retail platform, an enterprise corporate portal, or a specialized web interface, HAKA SOLUTIONS is ready to collaborate.
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="contact.html" class="btn btn-primary btn-lg">Let's Discuss Your Project</a>
+          <a href="solutions.html" class="btn btn-outline btn-lg">Explore All Solutions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SHOWCASE DETAILS MODAL (INTERACTIVE INSPECT DRAWER)
+       ============================================================ -->
+  <div class="showcase-modal-overlay" id="showcase-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="showcase-modal-container">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close project details">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+
+      <div id="modal-content">
+        <!-- Content dynamically injected via JavaScript -->
+        <div class="text-center py-8">
+          <div class="eyebrow mx-auto mb-2">PROJECT SPECIFICATION</div>
+          <h3 class="text-2xl font-bold text-white mb-4" id="modal-title">Project Overview</h3>
+          <p class="text-gray-300 text-sm leading-relaxed max-w-xl mx-auto">
+            Select any project card to view complete functional specifications, component breakdown, and frontend architecture details.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="margin-bottom:16px;display:inline-flex;">
+            <img src="assets/logo.jpeg" alt="HAKA SOLUTIONS Logo" class="nav-logo-img" />
+            <div class="nav-logo-text">
+              <span class="nav-logo-name">HAKA SOLUTIONS</span>
+              <span class="nav-logo-tagline">Technology &middot; Digital &middot; Growth</span>
+            </div>
+          </a>
+          <p>
+            HAKA SOLUTIONS delivers reliable technology, digital operations and business support solutions designed to help organizations work smarter, scale faster and achieve sustainable growth.
+          </p>
+          <div class="footer-social">
+            <a href="#" aria-label="LinkedIn" title="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="#" aria-label="Instagram" title="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" aria-label="WhatsApp" title="WhatsApp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            </a>
+            <a href="mailto:contact@hakasolutions.com" aria-label="Email Us" title="Email Us">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="about.html#leadership">Leadership</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Solutions</h4>
+          <ul>
+            <li><a href="solutions.html#digital-operations">Digital Operations</a></li>
+            <li><a href="solutions.html#data-solutions">Data Solutions</a></li>
+            <li><a href="solutions.html#technology">Technology Solutions</a></li>
+            <li><a href="solutions.html#business-support">Business Support</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="index.html#case-studies">Case Studies</a></li>
+            <li><a href="#">Blog <span style="font-size:0.7rem;color:#64748B">(coming soon)</span></a></li>
+            <li><a href="#">FAQs <span style="font-size:0.7rem;color:#64748B">(coming soon)</span></a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="#" title="LinkedIn — not yet configured">LinkedIn</a></li>
+            <li><a href="#" title="Instagram — not yet configured">Instagram</a></li>
+            <li><a href="#" title="WhatsApp — number not yet configured">WhatsApp</a></li>
+            <li><a href="mailto:contact@hakasolutions.com">Email Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span class="js-year"></span> HAKA SOLUTIONS — Technology • Digital Solutions • Business Growth. All rights reserved.</p>
+        <nav class="footer-legal" aria-label="Legal links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms &amp; Conditions</a>
+          <a href="#">Cookie Policy</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- Master JavaScript -->
+  <script src="js/main.js"></script>
+
+  <!-- Portfolio Page Interactive Features -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      /* 1. Category Filter Logic */
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const cards = document.querySelectorAll('.portfolio-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => {
+            b.classList.remove('active');
+            b.setAttribute('aria-selected', 'false');
+          });
+          btn.classList.add('active');
+          btn.setAttribute('aria-selected', 'true');
+
+          const filterVal = btn.getAttribute('data-filter');
+          const filterVal2 = btn.getAttribute('data-filter2');
+
+          cards.forEach(card => {
+            const cardCat = card.getAttribute('data-category');
+            if (filterVal === 'all' || cardCat === filterVal || cardCat === filterVal2) {
+              card.style.display = 'flex';
+              setTimeout(() => {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+              }, 10);
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      /* 2. Project Details Modal Content Store */
+      const projectDetails = {
+        'luxury-fashion': {
+          category: 'E-Commerce & Retail Solutions',
+          title: 'Luxury Fashion E-Commerce Showcase',
+          headline: 'High-Conversion Digital Flagship for Luxury Fashion & Couture',
+          clientChallenge: 'Bespoke fashion houses require aesthetic sophistication without sacrificing lightning-fast load speeds, instant currency conversions, and frictionless mobile checkouts.',
+          solutionArch: 'Constructed an ultra-lean static frontend incorporating client-side faceted filtering, image-preloading micro-architectures, dynamic modal bag drawers, and WCAG AA contrast.',
+          deliverables: [
+            'Instant multi-parameter product filter engine (Color, Size, Material, Price)',
+            'Dynamic multi-currency switcher with instant price recalculations',
+            'Lookbook drawer featuring high-res zoom with touch gestures',
+            'Sub-800ms Largest Contentful Paint (LCP) performance benchmark'
+          ],
+          techStack: ['HTML5 Semantic', 'Tailwind CSS', 'Vanilla JavaScript', 'Local State Storage', 'WebP Optimizations']
+        },
+        'ts-landscaping': {
+          category: 'Commercial & Civil Engineering',
+          title: 'TS Landscaping & Construction Site',
+          headline: 'Heavy Commercial Contracting & Precision Landscape Architecture',
+          clientChallenge: 'Commercial contractors struggle with high bounce rates when prospective corporate clients cannot easily calculate project ballparks, inspect machinery capability, or verify safety accreditations.',
+          solutionArch: 'Engineered a rugged, conversion-oriented portal with client-side cost estimators, interactive before-and-after slider comparisons, and comprehensive machinery fleet manifests.',
+          deliverables: [
+            'Client-side interactive project cost calculator with custom square-footage sliders',
+            'Before-and-after dual layer interactive visual slider component',
+            'Machinery fleet specifications directory with live equipment filters',
+            'Commercial ISO & OSHA safety compliance badge showcase'
+          ],
+          techStack: ['HTML5 Grid Layouts', 'Custom JS Slider Engine', 'Tailwind CSS', 'SVG Vector Blueprints']
+        },
+        'healthcare-network': {
+          category: 'Healthcare & Clinical Portals',
+          title: 'Healthcare Provider Clinic Network',
+          headline: 'HIPAA-Compliant Patient Portal & Doctor Scheduling Engine',
+          clientChallenge: 'Clinical networks require accessible, low-friction appointment booking that accommodates patients of all technical abilities while maintaining strict data handling standards.',
+          solutionArch: 'Built a 100% accessible, WCAG 2.1 AA compliant clinical scheduling portal featuring doctor availability calendar matrices, clinic geolocation, and prototype triage questionnaires.',
+          deliverables: [
+            'Interactive doctor appointment booking stepper with live timeslot selector',
+            'Patient symptom triage intake questionnaire with instant validation',
+            'Interactive facility locator with click-to-call and map routing links',
+            'Strict adherence to high-contrast WCAG 2.1 AA accessibility guidelines'
+          ],
+          techStack: ['WCAG 2.1 AA Accessible UI', 'Vanilla JS Calendar Logic', 'Tailwind CSS', 'Zero-Server Privacy Flow']
+        },
+        'grand-event': {
+          category: 'Events & Multi-Track Summits',
+          title: 'Grand Event & Conference Hub',
+          headline: 'Multi-Track Convention Portal, Live Schedule & Pass Selector',
+          clientChallenge: 'Large-scale conferences with dozens of concurrent tracks require clear timeline navigation and frictionless ticket registration capable of handling tens of thousands of visitors.',
+          solutionArch: 'Engineered an ultra-fast event hub featuring a dynamic tabbed multi-track agenda matrix, speaker bio drawer modals, countdown clocks, and tiered ticket pass calculators.',
+          deliverables: [
+            'Multi-track daily agenda timeline with real-time category filtering',
+            'Keynote speaker profiles with expandable bio dossiers and bookmarking',
+            'Interactive pass tier comparison matrix with feature checklists',
+            'Live client-side conference countdown timer'
+          ],
+          techStack: ['CSS Grid Timelines', 'Vanilla JS Agenda Switcher', 'Tailwind CSS', 'SVG Layout Schematics']
+        },
+        'real-estate': {
+          category: 'Real Estate & Architecture',
+          title: 'Real Estate Property Portal',
+          headline: 'Ultra-Modern Luxury Listings, Mortgage Engine & Floorplans',
+          clientChallenge: 'High-net-worth real estate buyers demand high-fidelity visual representations, immediate financial calculations, and detailed floorplans without clumsy portal redirects.',
+          solutionArch: 'Developed an elegant luxury property portal with embedded client-side mortgage payment calculators, interactive floorplan hot-spot markers, and touch-optimized photo carousels.',
+          deliverables: [
+            'Real-time mortgage payment calculator with down payment and APR sliders',
+            'Interactive SVG floorplan viewer with clickable room detail hotspots',
+            'Neighborhood amenity radar index (Transit, Private Schools, Dining)',
+            'Direct agent consultation inquiry drawer with instant feedback'
+          ],
+          techStack: ['Client Mortgage Calculation Engine', 'SVG Hotspot Mapping', 'Vanilla JS Touch UX', 'Tailwind CSS']
+        },
+        'restaurant-platform': {
+          category: 'Hospitality & Culinary Platforms',
+          title: 'Premium Restaurant & Café Platform',
+          headline: 'Artisan Gastronomy Showcase, Digital Menu & Table Booking Engine',
+          clientChallenge: 'Premier restaurants need a mobile-first digital presence where patrons can effortlessly review dietary offerings, explore wine pairings, and secure reservations with zero delay.',
+          solutionArch: 'Created a gastronomy platform featuring interactive dietary-filtered menus, live reservation slot pickers, private dining event estimators, and sommelier pairing notes.',
+          deliverables: [
+            'Filterable interactive digital menu with dietary badges (GF, Vegan, Chef Choice)',
+            'Real-time table reservation simulator with party size and time slot selection',
+            'Curated sommelier wine pairing notes and tasting flight preview',
+            'Private dining & event booking inquiry drawer'
+          ],
+          techStack: ['Interactive Menu Filter Engine', 'Vanilla JS Reservation UX', 'Tailwind CSS', 'Mobile-First Touch Ergonomics']
+        }
+      };
+
+      /* 3. Modal Controls */
+      const modal = document.getElementById('showcase-modal');
+      const modalClose = document.getElementById('modal-close-btn');
+      const modalContent = document.getElementById('modal-content');
+      const detailButtons = document.querySelectorAll('.open-details-btn');
+
+      function openModal(projectId) {
+        const data = projectDetails[projectId];
+        if (!data) return;
+
+        let deliverablesHtml = data.deliverables.map(item => `
+          <li class="flex items-start gap-2.5 text-sm text-gray-300">
+            <svg class="w-4 h-4 text-cyan-400 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>${item}</span>
+          </li>
+        `).join('');
+
+        let techTagsHtml = data.techStack.map(tag => `
+          <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20">${tag}</span>
+        `).join('');
+
+        modalContent.innerHTML = `
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-cyan-400">${data.category}</span>
+            <h3 class="text-2xl font-bold text-white mt-1 mb-2 font-display">${data.title}</h3>
+            <p class="text-emerald-400 font-medium text-sm mb-6">${data.headline}</p>
+
+            <div class="space-y-4 mb-6 text-sm text-gray-300 leading-relaxed border-t border-b border-white/10 py-5">
+              <div>
+                <strong class="text-white block mb-1">Business &amp; Architectural Challenge:</strong>
+                <p class="text-gray-400">${data.clientChallenge}</p>
+              </div>
+              <div>
+                <strong class="text-white block mb-1">Our Engineering Approach:</strong>
+                <p class="text-gray-400">${data.solutionArch}</p>
+              </div>
+            </div>
+
+            <div class="mb-6">
+              <strong class="text-white text-sm block mb-3">Key Technical Deliverables:</strong>
+              <ul class="space-y-2">
+                ${deliverablesHtml}
+              </ul>
+            </div>
+
+            <div class="mb-8">
+              <strong class="text-white text-xs uppercase tracking-wider block mb-2.5">Technology Stack Applied:</strong>
+              <div class="flex flex-wrap gap-2">
+                ${techTagsHtml}
+              </div>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-white/10">
+              <a href="contact.html" class="btn btn-primary btn-sm">Discuss Similar Project</a>
+              <button class="btn btn-outline btn-sm" onclick="document.getElementById('showcase-modal').classList.remove('active')">Close Window</button>
+            </div>
+          </div>
+        `;
+
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      detailButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const pId = btn.getAttribute('data-project');
+          openModal(pId);
+        });
+      });
+
+      if (modalClose) {
+        modalClose.addEventListener('click', closeModal);
+      }
+
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          closeModal();
+        }
+      });
+
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+          closeModal();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
